@@ -47,7 +47,7 @@ The service will accept `GET` requests with a request param `url`. For Example:
 http://localhost:8080/data?url=https://www.netflix.com
 ----
 
-The response to get request is Page Data in Database corresponding to the Url:
+The response to get GET REQUEST is JSON representation of Page Data stored in the database for the Url:
 
 [source,json]
 ----
@@ -67,16 +67,17 @@ The response to get request is Page Data in Database corresponding to the Url:
 SENTIMENT DATA
 ----
 The API connects to `aylien.com` sentiment analysis API to retrieve sentiment data corresponding to a webpage.
----
- HTTPS STATUS And EXCEPTION HANDLING
 ----
 
+
+ HTTPS STATUS And EXCEPTION HANDLING
+----
 The application supports following HTTPS Status Codes:
+
 - 200 OK Success
 - 400 Bad Request, if request contains invalid arguments.
 - 403 Forbidden, if data scraping is not permitted on the page.
 - 404 Not Found, if No Such Element found corresponding to get Page by URL request.
 - 504 Gateway Timeout , if request takes longer than 6000 ms.
-
 ----
 Please feel free to write to rupleena@gmail.com if you have any questions! Thank you!
