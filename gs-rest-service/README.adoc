@@ -9,7 +9,7 @@
 This guide walks you through the process of Using this REST APPLICATION.
 
 
-### The service will accept HTTP POST requests at ###
+### HTTP POST METHOD ###
 
 ----
 http://localhost:8080/data/
@@ -43,10 +43,9 @@ and respond with a link:/understanding/JSON[JSON] representation of a data about
 ----
 
 
-### The service will accept `GET` requests with a request param `url`###
-For Example:
-----
+### HTTP GET METHOD ###
 
+----
 http://localhost:8080/data?url=https://www.netflix.com
 ----
 
@@ -73,7 +72,7 @@ The API connects to `aylien.com` sentiment analysis API to retrieve sentiment da
 ----
 
 
-### HTTPS STATUS And EXCEPTION HANDLING ###
+### HTTPS STATUS ###
 The application supports following HTTPS Status Codes:
 ----
 - 200 OK Success
