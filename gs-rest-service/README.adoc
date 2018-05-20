@@ -9,7 +9,7 @@
 This guide walks you through the process of Using this REST APPLICATION.
 
 
-### Parse Page Data and Store in DB ###
+### Parse Webpage Data ###
 
 ----
 http://localhost:8080/data/
@@ -43,7 +43,7 @@ and respond with a link:/understanding/JSON[JSON] representation of a data about
 ----
 
 
-### Retrieve Page Data from DB ###
+### Retrieve Webpage Data ###
 
 ----
 http://localhost:8080/data?url=https://www.netflix.com
