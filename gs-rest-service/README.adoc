@@ -66,12 +66,6 @@ The response to get GET REQUEST is JSON representation of Page Data stored in th
 }
 ----
 
-### SENTIMENT DATA ###
-----
-The API connects to `aylien.com` sentiment analysis API to retrieve sentiment data corresponding to a webpage.
-----
-
-
 ### HTTPS STATUS ###
 The application supports following HTTPS Status Codes:
 ----
@@ -81,4 +75,19 @@ The application supports following HTTPS Status Codes:
 - 404 Not Found, if No Such Element found corresponding to get Page by URL request.
 - 504 Gateway Timeout , if request takes longer than 6000 ms.
 ----
+
+### PAGE SENTIMENT DATA ###
+----
+The API connects to `aylien.com` sentiment analysis API to retrieve sentiment data corresponding to a webpage.
+----
+
+### Page METADATA ###
+---
+The API uses JSOUP library to parse HTML contents of the page to retrieve page metadata.
+---
+ 
+### DATABASE ###
+---
+The API uses `JPA+H2` for database layer.
+---
 Please feel free to write to rupleena@gmail.com if you have any questions! Thank you!
