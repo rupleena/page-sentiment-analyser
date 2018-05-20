@@ -82,12 +82,13 @@ The API connects to `aylien.com` sentiment analysis API to retrieve sentiment da
 ----
 
 ### Page Metadata ###
----
-The API uses JSOUP library to parse HTML contents of the page to retrieve page metadata.
----
+----
+The API uses `JSOUP` library to parse HTML contents of the page to retrieve page metadata.
+----
  
 ### Database Layer ###
----
+----
 The API uses `JPA+H2` for database layer.
----
+----
+
 Please feel free to write to rupleena@gmail.com if you have any questions! Thank you!
