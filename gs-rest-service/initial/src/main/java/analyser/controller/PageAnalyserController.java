@@ -24,7 +24,7 @@ public class PageAnalyserController {
 
     @RequestMapping(method = RequestMethod.GET, headers = {
             "content-type=application/json"})
-    public PageData parsePage(@Valid @RequestParam String url) throws InvalidArgumentException {
+    public PageData findByURL(@Valid @RequestParam String url) throws InvalidArgumentException {
         return pageAnalyserService.findByUrl(url);
     }
 }
