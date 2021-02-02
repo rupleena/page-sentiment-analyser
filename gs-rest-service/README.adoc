@@ -10,7 +10,7 @@
 
 ### API Support 2 REST End points as described below:###
 ----
-1. DESCRIPTION: API to parse a Web URL and analyse for sentiment.
+1. DESCRIPTION: API to parse a Web URL and analyse for sentiment and store the results to the Dabatase.
    METHOD: POST
    URL: http://localhost:8080/data/
    PAYLOAD: {"url":"https://www.google.com"}
