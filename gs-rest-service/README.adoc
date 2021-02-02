@@ -9,6 +9,7 @@
 ### This guide walks you through the process of Using this REST APPLICATION.###
 
 ### API Support 2 REST End points as described below:###
+----
 1. DESCRIPTION: API to parse a Web URL and analyse for sentiment.
    METHOD: POST
    URL: http://localhost:8080/data/
@@ -25,7 +26,7 @@
     "subjectivity_confidence": 1,
     "url": "https://www.google.com"
 }
-----
+
 
 2. DESCRIPTION: Retrieve Webpage Data from database.
    METHOD: GET
@@ -42,10 +43,10 @@
     "subjectivity_confidence": 1,
     "url": "https://www.netflix.com"
 }
-
+----
+----
 ### HTTP Status Codes ###
 The application supports following HTTPS Status Codes:
-----
 - 200 OK Success
 - 400 Bad Request, if request contains invalid arguments.
 - 403 Forbidden, if data scraping is not permitted on the page.
@@ -53,10 +54,11 @@ The application supports following HTTPS Status Codes:
 - 504 Gateway Timeout , if request takes longer than 6000 ms.
 ----
 
+----
 ### Technologies used ###
 1. Spring Boot Framework and Java as programming language.
 2. The API connects to `aylien.com` sentiment analysis API to retrieve sentiment data corresponding to a webpage.
 3. The API uses `JSOUP` library to parse HTML contents of the page to retrieve page metadata.
 4. The API uses `JPA+H2` for database layer.
-
+----
 Please feel free to write to rupleena@gmail.com if you have any questions! Thank you!
