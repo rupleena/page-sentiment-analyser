@@ -6,14 +6,9 @@ RESTful service to parse an Web URL for sentiment analysis and output the result
 
 ### Pre-requisites
 
-- IntelliJ IDE
-- JDK 11
-- REST Client
-
-Steps
 - Unzip the zipped project folder.
 - Import the project into IntelliJ
-- Run as SpringBoot application (Main Class: GameApplication.java)
+- Run as SpringBoot application (Main Class: SpringBootApplication.java)
 - Using REST Client, access API endpoints
 
 ### API Endpoints
