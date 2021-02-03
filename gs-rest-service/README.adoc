@@ -1,6 +1,8 @@
 # Getting Started
 
-Web Page Sentiment Analyser
+### Web Page Sentiment Analyser
+RESTful service to parse an Web URL for sentiment analysis and output the results. Store the result in database. Allow search by url to retrieve the result for a URL.
+
 
 ### Pre-requisites
 
@@ -13,10 +15,6 @@ Steps
 - Import the project into IntelliJ
 - Run as SpringBoot application (Main Class: GameApplication.java)
 - Using REST Client, access API endpoints
-
-
-### REQUIREMENTS
-Write a RESTful service to parse an Web URL for sentiment analysis. After a web URL is analysed for sentiment, store the results in database. Write an API to search database by URL for stored sentiment information.
 
 ### API Endpoints
 * POST http://localhost:8080/data/
