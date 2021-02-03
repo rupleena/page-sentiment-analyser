@@ -30,7 +30,7 @@ RESTful service to parse an Web URL for sentiment analysis and output the result
 }
 API to parse a Web URL and analyse for sentiment and store the results to the Dabatase.
 
-* GET http://localhost:8080/data?url=https://www.netflix.com
+* GET http://localhost:8080/data?url=https://www.google.com
 
   Sample Response: {
     "page_title": "Google",
