@@ -1,22 +1,30 @@
-:spring_version: current
-:toc:
-:project_id: gs-rest-service
-:spring_version: current
-:spring_boot_version: 2.0.2.RELEASE
-:icons: font
-:source-highlighter: prettify
+# Getting Started
+
+Web Page Sentiment Analyser
+
+### Pre-requisites
+
+- IntelliJ IDE
+- JDK 11
+- REST Client
+
+Steps
+- Unzip the zipped project folder.
+- Import the project into IntelliJ
+- Run as SpringBoot application (Main Class: GameApplication.java)
+- Using REST Client, access API endpoints
+
 
 ### REQUIREMENTS
 Write a RESTful service to parse an Web URL for sentiment analysis. After a web URL is analysed for sentiment, store the results in database. Write an API to search database by URL for stored sentiment information.
 
-### REST API
+### API Endpoints
+* POST http://localhost:8080/data/
 
-1. DESCRIPTION: API to parse a Web URL and analyse for sentiment and store the results to the Dabatase.
-   METHOD: POST
-   URL: http://localhost:8080/data/
-   PAYLOAD: {"url":"https://www.google.com"}
-   OUTPUT:
-{
+  Sample Payload:
+  {"url":"https://www.google.com"}
+  
+  Sample Response: {
     "page_title": "Google",
     "description": "Search the world's information, including webpages, images, videos and more. Google has many special features to help you find exactly what you're looking for.",
     "author": "unknown",
@@ -27,31 +35,31 @@ Write a RESTful service to parse an Web URL for sentiment analysis. After a web 
     "subjectivity_confidence": 1,
     "url": "https://www.google.com"
 }
+API to parse a Web URL and analyse for sentiment and store the results to the Dabatase.
 
+* GET http://localhost:8080/data?url=https://www.netflix.com
 
-2. DESCRIPTION: Retrieve Webpage Data from database.
-   METHOD: GET
-   URL: http://localhost:8080/data?url=https://www.netflix.com
-   OUTPUT: The response is JSON representation of Page Data stored in the database for the Url:
-{
-    "page_title": "Netflix - Watch TV Shows Online, Watch Movies Online",
-    "description": "Watch Netflix movies & TV shows online or stream right to your smart TV, game console, PC, Mac, mobile, tablet and more.",
+  Sample Response: {
+    "page_title": "Google",
+    "description": "Search the world's information, including webpages, images, videos and more. Google has many special features to help you find exactly what you're looking for.",
     "author": "unknown",
-    "polarity": "neutral",
+    "polarity": "negative",
     "subjectivity": "subjective",
-    "text": "Watch on your TV Smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.Watch instantly or download for later Available on phone and tablet, wherever you go.",
-    "polarity_confidence": 0.5351378917694092,
+    "text": "Choose the privacy settings that are right for you",
+    "polarity_confidence": 0.4907958507537842,
     "subjectivity_confidence": 1,
-    "url": "https://www.netflix.com"
+    "url": "https://www.google.com"
 }
+Retrieve Webpage Data from database.
 
 ### HTTP Status Codes
-The application supports following HTTPS Status Codes:
-- 200 OK Success
-- 400 Bad Request, if request contains invalid arguments.
-- 403 Forbidden, if data scraping is not permitted on the page.
-- 404 Not Found, if No Such Element found corresponding to get Page by URL request.
-- 504 Gateway Timeout , if request takes longer than 6000 ms.
+
+ The application supports following HTTPS Status Codes:
+  * 200 OK Success
+  * 400 Bad Request, if request contains invalid arguments.
+  * 403 Forbidden, if data scraping is not permitted on the page.
+  * 404 Not Found, if No Such Element found corresponding to get Page by URL request.
+  * 504 Gateway Timeout , if request takes longer than 6000 ms.
 
 
 ### Exception Handling
